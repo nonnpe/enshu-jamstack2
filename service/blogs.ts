@@ -16,4 +16,4 @@ export const getBlogBy = id => (
   }})
 )
 
-// コメント
+// コメント コメント

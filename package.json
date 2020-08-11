@@ -1,15 +1,39 @@
 {
-  "name": "nextjs-blog",
-  "version": "0.1.0",
-  "private": true,
+  "name": "nextjs-kits",
+  "version": "1.0.0",
+  "description": "Next.js starterKit and extends more and more",
+  "main": "index.js",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next",
+    "dev:export": "cd ./out && python -m SimpleHTTPServer 8000",
     "build": "next build",
-    "start": "next start"
+    "build:serverless": "env ENV_SERVERLESS=serverless next build",
+    "start": "next start",
+    "export": "npm run build && next export",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "",
+  "license": "MIT",
   "dependencies": {
-    "next": "9.5.1",
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "next": "^9.3.4",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.11.7",
+    "@types/react": "^16.9.11",
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
+    "eslint": "^5.11.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "node-sass": "^4.13.1",
+    "prettier": "^1.15.3",
+    "typescript": "^3.6.4"
   }
 }
